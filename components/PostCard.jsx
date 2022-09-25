@@ -6,7 +6,7 @@ function PostCard({post}){
     return (
         <div className='post_parent_div'>
             <div className='post_sub_parent_div'>
-                <img 
+                <img
                     src={post.featuredImage.url}
                     alt={post.title}
                     className="img_div"
