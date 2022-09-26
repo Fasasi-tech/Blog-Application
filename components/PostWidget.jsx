@@ -3,15 +3,20 @@ import moment from 'moment'
 import Link from 'next/link'
 import {getRecentPosts,getSimilarPosts} from '../services'
 function PostWidget({categories,slug}){
-    const [relatedPosts,setRelatedPosts]=useState([]);
+    const [relatedPosts, setRelatedPosts]=useState([]);
 
-    useEffect(() =>{
-        if (slug){
-            getSimilarPosts(categories,slug).then((result)=>setRelatedPosts(result))
-        }else{
-            getRecentPosts().then((result)=>setRelatedPosts(result))
+    useEffect(() => {
+        if (slug) {
+          getSimilarPosts(categories, slug).then((result) => {
+            setRelatedPosts(result);
+          });
+        } else {
+          getRecentPosts().then((result) => {
+            setRelatedPosts(result);
+          });
         }
-    },[slug])
+      }, [slug]);
+    
     return (
         <div className='postwidget_div'>
             <h3 className='postwidget_heading'>
