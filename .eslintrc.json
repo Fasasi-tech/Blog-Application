@@ -4,7 +4,6 @@
     // Other rules
     "@next/next/no-img-element": "off",
     "react/no-unescaped-entities": "off",
-    "react/jsx-props-no-spreading": 0,
     "@next/next/no-page-custom-font": "off"
   }
 }
